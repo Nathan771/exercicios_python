@@ -3,10 +3,14 @@ def melhor_preco():
     for i in range (0, 3):
         nome_produtos = input("Digite os produtos: ")
         preco = float(input("Digite o preço dos produtos: "))
-        produtos.append({"Produto": nome_produtos, "Preço": preco:.2f})
+        produtos.append({
+                
+                "Produto": nome_produtos, 
+                "Preço": f"{preco:.2f}" 
+                
+                })
     
+    menor = min(produtos, key=lambda u: u["Preço"])
+    print(f"O menor preço é {menor['Preço']} ")
     
-    print(produtos)
-    #menor = min(produto)
-    #print(f"O menor produto custa: {menor}, sugiro comprar! ")
 melhor_preco()
