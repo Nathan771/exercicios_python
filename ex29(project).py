@@ -15,3 +15,4 @@ def validate_user():
 
 validate_user()
    
+def refresh_user()
